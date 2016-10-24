@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>GIS LIS Workshop</title>
+  <link rel="shortcut icon" href="//c.ymcdn.com/sites/www.mngislis.org/graphics/logo.png">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.18/esri/css/esri.css">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.18/dijit/themes/tundra/tundra.css">
+  <link rel="stylesheet" href="style/main.css">
+  <script src="http://js.arcgis.com/3.18/"></script>
+  <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="http://use.fontawesome.com/b4feb87b61.js"></script>
+  <script src="script/bin/field_map.js"></script>
+  <script src="script/map.js"></script>
+  <script src="script/modules/MapStyling.js"></script>
+  <script src="script/modules/GPTools.js"></script>
+  <script src="script/UI.js"></script>
+</head>
+
+<body class="tundra">
+  <div id="lightbox"></div>
+  <div class="dlgTT" id="tooltipDlg"></div>
+  <div class="dlgbox">
+    <div class="dlg-header"></div>
+    <div class="dlg" id="content">
+      <div id="toolDesc"></div>
+    </div>
+  </div>
+  <div id="mapDiv">
+    <div id="info">
+      <h1>GP Tools</h1>
+      <div class="menuItem" id="mailingItem">Mailing Labels</div>
+      <div class="menuItem" id="exportFtrsItem">Export Features</div>
+      <div class="menuItem" id="exportMapItem">Export Property Map</div>
+    </div>
+  </div>
+</body>
+
+</html>
