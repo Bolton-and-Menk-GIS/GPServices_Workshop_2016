@@ -1,0 +1,919 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717574.629055638, 
+              5575105.061594737
+            ], 
+            [
+              -10717574.611324823, 
+              5575102.9910552865
+            ], 
+            [
+              -10717578.842942078, 
+              5575102.944414363
+            ], 
+            [
+              -10717578.85969067, 
+              5575105.0149583835
+            ], 
+            [
+              -10717574.629055638, 
+              5575105.061594737
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "8", 
+        "Last_Name": "Carman", 
+        "PLOT_ID": "O1-38-8", 
+        "Section": "Old", 
+        "First_Last": "Mary Jeane Carman", 
+        "Distance_Direction": "12 ft east", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "East", 
+        "Burial_Date": -1518048000000, 
+        "Matches": 1, 
+        "Flag": "No", 
+        "Shape.area": 47.642411383389465, 
+        "Place_of_Death": "Freeland", 
+        "Burial_Year": 2021, 
+        "Distance": 12, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 1812, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-8", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.40821347880345, 
+        "First_Name": "Mary Jeane", 
+        "Gravesites_OID": 1940
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717574.593735127, 
+              5575100.920656582
+            ], 
+            [
+              -10717574.575632295, 
+              5575098.800087786
+            ], 
+            [
+              -10717578.809102852, 
+              5575098.759780337
+            ], 
+            [
+              -10717578.826194141, 
+              5575100.8740117485
+            ], 
+            [
+              -10717574.593735127, 
+              5575100.920656582
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "10", 
+        "Last_Name": "Hill", 
+        "PLOT_ID": "O1-38-10", 
+        "Section": "Old", 
+        "First_Last": "Charles Reuben Hill", 
+        "Distance_Direction": "21 ft east", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "East", 
+        "Burial_Date": -1170028800000, 
+        "Matches": 1, 
+        "Flag": "No", 
+        "Shape.area": 48.741508749426444, 
+        "Place_of_Death": "Freeland", 
+        "Burial_Year": 1932, 
+        "Distance": 21, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 1813, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-10", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.63483727521641, 
+        "First_Name": "Charles Reuben", 
+        "Gravesites_OID": 2333
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717578.842942078, 
+              5575102.944414363
+            ], 
+            [
+              -10717578.826194141, 
+              5575100.8740117485
+            ], 
+            [
+              -10717583.058653105, 
+              5575100.827364932
+            ], 
+            [
+              -10717583.07455994, 
+              5575102.897912392
+            ], 
+            [
+              -10717578.842942078, 
+              5575102.944414363
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "4", 
+        "Last_Name": "Hill", 
+        "PLOT_ID": "O1-38-4", 
+        "Section": "Old", 
+        "First_Last": "Anna Hill", 
+        "Distance_Direction": "17 ft west", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "West", 
+        "Burial_Date": -1240444800000, 
+        "Matches": 1, 
+        "Flag": "No", 
+        "Shape.area": 47.6509327604439, 
+        "Place_of_Death": "Rochester, MN", 
+        "Burial_Year": 1930, 
+        "Distance": 17, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 1814, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-4", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.41213337036773, 
+        "First_Name": "Anna", 
+        "Gravesites_OID": 2330
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717578.85969067, 
+              5575105.0149583835
+            ], 
+            [
+              -10717578.842942078, 
+              5575102.944414363
+            ], 
+            [
+              -10717583.07455994, 
+              5575102.897912392
+            ], 
+            [
+              -10717583.090325668, 
+              5575104.968320033
+            ], 
+            [
+              -10717578.85969067, 
+              5575105.0149583835
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "3", 
+        "Last_Name": "Hill", 
+        "PLOT_ID": "O1-38-3", 
+        "Section": "Old", 
+        "First_Last": "Mabel Hill", 
+        "Distance_Direction": "15 ft west", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "West", 
+        "Burial_Date": 340675200000, 
+        "Matches": 3, 
+        "Flag": "", 
+        "Shape.area": 47.64064357963341, 
+        "Place_of_Death": "Colorado", 
+        "Burial_Year": 1980, 
+        "Distance": 15, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 1815, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-3", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.407867378518347, 
+        "First_Name": "Mabel", 
+        "Gravesites_OID": 2332
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717578.876438629, 
+              5575107.0853619315
+            ], 
+            [
+              -10717578.85969067, 
+              5575105.0149583835
+            ], 
+            [
+              -10717583.090325668, 
+              5575104.968320033
+            ], 
+            [
+              -10717583.106231857, 
+              5575107.038727503
+            ], 
+            [
+              -10717578.876438629, 
+              5575107.0853619315
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "2", 
+        "Last_Name": "Hill", 
+        "PLOT_ID": "O1-38-2", 
+        "Section": "Old", 
+        "First_Last": "George W. Hill", 
+        "Distance_Direction": "7 ft west", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "West", 
+        "Burial_Date": -1014768000000, 
+        "Matches": 1, 
+        "Flag": "No", 
+        "Shape.area": 47.628756502713166, 
+        "Place_of_Death": "St. Peter, MN", 
+        "Burial_Year": 1937, 
+        "Distance": 7, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 1816, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-2", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.403277367714693, 
+        "First_Name": "George W.", 
+        "Gravesites_OID": 2334
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717578.89318724, 
+              5575109.155906885
+            ], 
+            [
+              -10717578.876438629, 
+              5575107.0853619315
+            ], 
+            [
+              -10717583.106231857, 
+              5575107.038727503
+            ], 
+            [
+              -10717583.122138713, 
+              5575109.109276355
+            ], 
+            [
+              -10717578.89318724, 
+              5575109.155906885
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "1", 
+        "Last_Name": "Hill", 
+        "PLOT_ID": "O1-38-1", 
+        "Section": "Old", 
+        "First_Last": "Mary E. Hill", 
+        "Distance_Direction": "1 ft west", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "West", 
+        "Burial_Date": -2488579200000, 
+        "Matches": 2, 
+        "Flag": "", 
+        "Shape.area": 47.6225099075675, 
+        "Place_of_Death": "Dover, MN", 
+        "Burial_Year": 1891, 
+        "Distance": 1, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 1817, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-1", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.399996610041732, 
+        "First_Name": "Mary E.", 
+        "Gravesites_OID": 1939
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717574.664375523, 
+              5575109.202393844
+            ], 
+            [
+              -10717574.64664535, 
+              5575107.13199438
+            ], 
+            [
+              -10717578.876438629, 
+              5575107.0853619315
+            ], 
+            [
+              -10717578.89318724, 
+              5575109.155906885
+            ], 
+            [
+              -10717574.664375523, 
+              5575109.202393844
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "6", 
+        "Last_Name": null, 
+        "PLOT_ID": "O1-38-6", 
+        "Section": "Old", 
+        "First_Last": null, 
+        "Distance_Direction": null, 
+        "Date_of_Death": null, 
+        "Lot": null, 
+        "Direction": null, 
+        "Burial_Date": null, 
+        "Matches": null, 
+        "Flag": null, 
+        "Shape.area": 47.62022925935102, 
+        "Place_of_Death": null, 
+        "Burial_Year": null, 
+        "Distance": null, 
+        "Match_Type": "No Match", 
+        "OBJECTID": 4104, 
+        "Age": null, 
+        "Gravesites_Plot_ID": null, 
+        "Missing_Data": null, 
+        "Block": null, 
+        "Shape.len": 29.399353327128722, 
+        "First_Name": null, 
+        "Gravesites_OID": null
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717574.64664535, 
+              5575107.13199438
+            ], 
+            [
+              -10717574.629055638, 
+              5575105.061594737
+            ], 
+            [
+              -10717578.85969067, 
+              5575105.0149583835
+            ], 
+            [
+              -10717578.876438629, 
+              5575107.0853619315
+            ], 
+            [
+              -10717574.64664535, 
+              5575107.13199438
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "7", 
+        "Last_Name": "Carman", 
+        "PLOT_ID": "O1-38-7", 
+        "Section": "Old", 
+        "First_Last": "Joseph B. Carman", 
+        "Distance_Direction": "5 ft west", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "West", 
+        "Burial_Date": -2068588800000, 
+        "Matches": null, 
+        "Flag": null, 
+        "Shape.area": 47.62887985663313, 
+        "Place_of_Death": "Freeland", 
+        "Burial_Year": 1904, 
+        "Distance": 5, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 4105, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-7", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.40329103497855, 
+        "First_Name": "Joseph B.", 
+        "Gravesites_OID": null
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717574.611324823, 
+              5575102.9910552865
+            ], 
+            [
+              -10717574.593735127, 
+              5575100.920656582
+            ], 
+            [
+              -10717578.826194141, 
+              5575100.8740117485
+            ], 
+            [
+              -10717578.842942078, 
+              5575102.944414363
+            ], 
+            [
+              -10717574.611324823, 
+              5575102.9910552865
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "9", 
+        "Last_Name": null, 
+        "PLOT_ID": "O1-38-9", 
+        "Section": "Old", 
+        "First_Last": null, 
+        "Distance_Direction": null, 
+        "Date_of_Death": null, 
+        "Lot": null, 
+        "Direction": null, 
+        "Burial_Date": null, 
+        "Matches": null, 
+        "Flag": null, 
+        "Shape.area": 47.649437013435396, 
+        "Place_of_Death": null, 
+        "Burial_Year": null, 
+        "Distance": null, 
+        "Match_Type": "No Match", 
+        "OBJECTID": 4106, 
+        "Age": null, 
+        "Gravesites_Plot_ID": null, 
+        "Missing_Data": null, 
+        "Block": null, 
+        "Shape.len": 29.411821030205015, 
+        "First_Name": null, 
+        "Gravesites_OID": null
+      }
+    }, 
+    {
+      "geometry": {
+        "rings": [
+          [
+            [
+              -10717578.826194141, 
+              5575100.8740117485
+            ], 
+            [
+              -10717578.809102852, 
+              5575098.759780337
+            ], 
+            [
+              -10717583.042432265, 
+              5575098.71933063
+            ], 
+            [
+              -10717583.058653105, 
+              5575100.827364932
+            ], 
+            [
+              -10717578.826194141, 
+              5575100.8740117485
+            ]
+          ]
+        ]
+      }, 
+      "attributes": {
+        "Plot": "5", 
+        "Last_Name": "Hill", 
+        "PLOT_ID": "O1-38-5", 
+        "Section": "Old", 
+        "First_Last": "Father C. R. Hill", 
+        "Distance_Direction": "21ft East", 
+        "Date_of_Death": null, 
+        "Lot": 38, 
+        "Direction": "East", 
+        "Burial_Date": -1170028800000, 
+        "Matches": null, 
+        "Flag": null, 
+        "Shape.area": 48.596226248325365, 
+        "Place_of_Death": "Freeland", 
+        "Burial_Year": 1932, 
+        "Distance": 21, 
+        "Match_Type": "Matched", 
+        "OBJECTID": 4107, 
+        "Age": null, 
+        "Gravesites_Plot_ID": "O1-38-5", 
+        "Missing_Data": null, 
+        "Block": 1, 
+        "Shape.len": 29.605296629876367, 
+        "First_Name": "Father C. R.", 
+        "Gravesites_OID": null
+      }
+    }
+  ], 
+  "fieldAliases": {
+    "Plot": "Plot", 
+    "Last_Name": "Last Name", 
+    "PLOT_ID": "PLOT_ID", 
+    "Section": "Section", 
+    "First_Last": "Full Name", 
+    "Distance_Direction": "Distance Direction", 
+    "Date_of_Death": "Date_of_Death", 
+    "Lot": "Lot", 
+    "Direction": "Direction", 
+    "Burial_Date": "Burial Date", 
+    "Matches": "# of Matches", 
+    "Flag": "Flag", 
+    "Shape.area": "Shape.area", 
+    "Place_of_Death": "Place_of_Death", 
+    "Burial_Year": "Burial_Year", 
+    "Distance": "Distance", 
+    "Match_Type": "Match Type", 
+    "OBJECTID": "OBJECTID", 
+    "Age": "Age", 
+    "Gravesites_Plot_ID": "Plot ID", 
+    "Missing_Data": "Missing Data", 
+    "Block": "Block", 
+    "Shape.len": "Shape.len", 
+    "First_Name": "First Name", 
+    "Gravesites_OID": "Gravesites_OID"
+  }, 
+  "fields": [
+    {
+      "alias": "OBJECTID", 
+      "type": "esriFieldTypeOID", 
+      "name": "OBJECTID"
+    }, 
+    {
+      "alias": "PLOT_ID", 
+      "length": 254, 
+      "type": "esriFieldTypeString", 
+      "name": "PLOT_ID"
+    }, 
+    {
+      "alias": "Gravesites_OID", 
+      "type": "esriFieldTypeInteger", 
+      "name": "Gravesites_OID"
+    }, 
+    {
+      "alias": "Last Name", 
+      "length": 50, 
+      "type": "esriFieldTypeString", 
+      "name": "Last_Name"
+    }, 
+    {
+      "alias": "First Name", 
+      "length": 50, 
+      "type": "esriFieldTypeString", 
+      "name": "First_Name"
+    }, 
+    {
+      "alias": "Place_of_Death", 
+      "length": 75, 
+      "type": "esriFieldTypeString", 
+      "name": "Place_of_Death"
+    }, 
+    {
+      "alias": "Date_of_Death", 
+      "length": 36, 
+      "type": "esriFieldTypeDate", 
+      "name": "Date_of_Death"
+    }, 
+    {
+      "alias": "Block", 
+      "type": "esriFieldTypeInteger", 
+      "name": "Block"
+    }, 
+    {
+      "alias": "Lot", 
+      "type": "esriFieldTypeInteger", 
+      "name": "Lot"
+    }, 
+    {
+      "alias": "Distance Direction", 
+      "length": 50, 
+      "type": "esriFieldTypeString", 
+      "name": "Distance_Direction"
+    }, 
+    {
+      "alias": "Age", 
+      "type": "esriFieldTypeInteger", 
+      "name": "Age"
+    }, 
+    {
+      "alias": "Burial Date", 
+      "length": 36, 
+      "type": "esriFieldTypeDate", 
+      "name": "Burial_Date"
+    }, 
+    {
+      "alias": "Section", 
+      "length": 25, 
+      "type": "esriFieldTypeString", 
+      "name": "Section"
+    }, 
+    {
+      "alias": "Distance", 
+      "type": "esriFieldTypeSmallInteger", 
+      "name": "Distance"
+    }, 
+    {
+      "alias": "Direction", 
+      "length": 5, 
+      "type": "esriFieldTypeString", 
+      "name": "Direction"
+    }, 
+    {
+      "alias": "Plot", 
+      "length": 5, 
+      "type": "esriFieldTypeString", 
+      "name": "Plot"
+    }, 
+    {
+      "alias": "Plot ID", 
+      "length": 20, 
+      "type": "esriFieldTypeString", 
+      "name": "Gravesites_Plot_ID"
+    }, 
+    {
+      "alias": "Missing Data", 
+      "length": 50, 
+      "type": "esriFieldTypeString", 
+      "name": "Missing_Data"
+    }, 
+    {
+      "alias": "# of Matches", 
+      "type": "esriFieldTypeInteger", 
+      "name": "Matches"
+    }, 
+    {
+      "alias": "Flag", 
+      "length": 3, 
+      "type": "esriFieldTypeString", 
+      "name": "Flag"
+    }, 
+    {
+      "alias": "Full Name", 
+      "length": 75, 
+      "type": "esriFieldTypeString", 
+      "name": "First_Last"
+    }, 
+    {
+      "alias": "Match Type", 
+      "length": 50, 
+      "type": "esriFieldTypeString", 
+      "name": "Match_Type"
+    }, 
+    {
+      "alias": "Burial_Year", 
+      "type": "esriFieldTypeSmallInteger", 
+      "name": "Burial_Year"
+    }, 
+    {
+      "alias": "Shape.area", 
+      "type": "esriFieldTypeDouble", 
+      "name": "Shape.area"
+    }, 
+    {
+      "alias": "Shape.len", 
+      "type": "esriFieldTypeDouble", 
+      "name": "Shape.len"
+    }
+  ], 
+  "displayFieldName": "Last_Name", 
+  "spatialReference": {
+    "wkid": 102100, 
+    "latestWkid": 3857
+  }, 
+  "geometryType": "esriGeometryPolygon",
+  "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "PLOT_ID",
+   "type": "esriFieldTypeString",
+   "alias": "PLOT_ID",
+   "length": 254,
+   "domain": null
+  },
+  {
+   "name": "Gravesites_OID",
+   "type": "esriFieldTypeInteger",
+   "alias": "Gravesites_OID",
+   "domain": null
+  },
+  {
+   "name": "Last_Name",
+   "type": "esriFieldTypeString",
+   "alias": "Last Name",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "First_Name",
+   "type": "esriFieldTypeString",
+   "alias": "First Name",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "Place_of_Death",
+   "type": "esriFieldTypeString",
+   "alias": "Place_of_Death",
+   "length": 75,
+   "domain": null
+  },
+  {
+   "name": "Date_of_Death",
+   "type": "esriFieldTypeDate",
+   "alias": "Date_of_Death",
+   "length": 36,
+   "domain": null
+  },
+  {
+   "name": "Block",
+   "type": "esriFieldTypeInteger",
+   "alias": "Block",
+   "domain": null
+  },
+  {
+   "name": "Lot",
+   "type": "esriFieldTypeInteger",
+   "alias": "Lot",
+   "domain": null
+  },
+  {
+   "name": "Distance_Direction",
+   "type": "esriFieldTypeString",
+   "alias": "Distance Direction",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "Age",
+   "type": "esriFieldTypeInteger",
+   "alias": "Age",
+   "domain": null
+  },
+  {
+   "name": "Burial_Date",
+   "type": "esriFieldTypeDate",
+   "alias": "Burial Date",
+   "length": 36,
+   "domain": null
+  },
+  {
+   "name": "Section",
+   "type": "esriFieldTypeString",
+   "alias": "Section",
+   "length": 25,
+   "domain": null
+  },
+  {
+   "name": "Distance",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Distance",
+   "domain": null
+  },
+  {
+   "name": "Direction",
+   "type": "esriFieldTypeString",
+   "alias": "Direction",
+   "length": 5,
+   "domain": null
+  },
+  {
+   "name": "Plot",
+   "type": "esriFieldTypeString",
+   "alias": "Plot",
+   "length": 5,
+   "domain": null
+  },
+  {
+   "name": "Gravesites_Plot_ID",
+   "type": "esriFieldTypeString",
+   "alias": "Plot ID",
+   "length": 20,
+   "domain": null
+  },
+  {
+   "name": "Missing_Data",
+   "type": "esriFieldTypeString",
+   "alias": "Missing Data",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "Matches",
+   "type": "esriFieldTypeInteger",
+   "alias": "# of Matches",
+   "domain": null
+  },
+  {
+   "name": "Flag",
+   "type": "esriFieldTypeString",
+   "alias": "Flag",
+   "length": 3,
+   "domain": null
+  },
+  {
+   "name": "First_Last",
+   "type": "esriFieldTypeString",
+   "alias": "Full Name",
+   "length": 75,
+   "domain": null
+  },
+  {
+   "name": "Match_Type",
+   "type": "esriFieldTypeString",
+   "alias": "Match Type",
+   "length": 50,
+   "domain": {
+    "type": "codedValue",
+    "name": "Match",
+    "codedValues": [
+     {
+      "name": "Matched to plot",
+      "code": "Matched"
+     },
+     {
+      "name": "No Match",
+      "code": "No Match"
+     },
+     {
+      "name": "Duplicate Matches",
+      "code": "Duplicate Matches"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Burial_Year",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "Burial_Year",
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  },
+  {
+   "name": "Shape.area",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape.area",
+   "domain": null
+  },
+  {
+   "name": "Shape.len",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape.len",
+   "domain": null
+  }
+ ]
+}

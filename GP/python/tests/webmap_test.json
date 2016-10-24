@@ -1,0 +1,68 @@
+{
+  "mapOptions": {
+    "extent": {
+      "xmin": -10253140.181272317,
+      "ymin": 5906842.075508584,
+      "xmax": -10251993.625847884,
+      "ymax": 5907253.521699957,
+      "spatialReference": {
+        "wkid": 102100,
+        "latestWkid": 3857
+      }
+    }
+  },
+  "operationalLayers": [{
+    "opacity": 0.65,
+    "title": "Parcels",
+    "url": "http://gis.stlouiscountymn.gov/arcgis/rest/services/GeneralUse/OpenData/MapServer/7",
+    "selectionSymbol": {
+      "color": [0, 0, 0, 0],
+      "outline": {
+        "color": [172, 11, 48, 255],
+        "width": 2.25,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "selectionObjectIds": [
+      7519
+    ],
+    "layerDefinition": {
+      "drawingInfo": {
+        "renderer": {
+          "symbol": {
+            "color": [
+              125,
+              125,
+              125,
+              89
+            ],
+            "style": "esriSFSSolid",
+            "type": "esriSFS",
+            "outline": {
+              "color": [
+                255,
+                255,
+                255,
+                89
+              ],
+              "width": 0.75,
+              "style": "esriSLSSolid",
+              "type": "esriSLS"
+            }
+          },
+          "type": "simple"
+        }
+      },
+      "definitionExpression": "PRCL_NBR <> 'Dedicated ROW'"
+    }
+  }],
+  "baseMap": {
+    "baseMapLayers": [{
+      "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"
+    }],
+    "title": "ESRI Imagery"
+  }
+}
