@@ -38,6 +38,7 @@ def export_property_card(webmap_json, feature, map_elm_json, pdf_res=100):
     config = utils.read_config()
     default = os.path.join(os.path.dirname(__file__), 'templates', 'template.mxd')
     template = config.get('map_template', default)
+    utils.Message(json.dumps(config, indent=2))
     output = arcpy.mapping.ConvertWebMapToMapDocument(webmap_json, template)
     mxd = output.mapDocument
 
@@ -93,7 +94,7 @@ def export_property_card(webmap_json, feature, map_elm_json, pdf_res=100):
 
         try:
             df.extent = poly.extent
-            df.scale *= 1.25
+            df.scale *= 1.75
         except RuntimeError: # thrown if df scale is fixed
             pass
 
@@ -109,6 +110,7 @@ def export_property_card(webmap_json, feature, map_elm_json, pdf_res=100):
 
     # step  7. Export to PDF
     # clean up temp dir if config tells us to
+    temp_dir = config.get('temp_dir', '')
     if config.get('clean_dirs', False) in (True, 'true'):
         utils.remove_files(temp_dir, subdirs=True, minutes=10)
         utils.remove_folders(temp_dir, minutes=10)
@@ -130,7 +132,6 @@ if __name__ == '__main__':
     # GP tool
     args = [arcpy.GetParameterAsText(i) for i in range(arcpy.GetArgumentCount()-1)] # last argument is output variable
     export_property_card(*args)
-    #utils.Message("Success")
 
 ##    # testing
 ##    fold = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'python', 'tests')

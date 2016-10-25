@@ -70,6 +70,7 @@ def export_reports(feature_set, owner_fields, address_fields, csz_fields, use_al
 
     # step 3. add headers
     headers, field_names = [], []
+    utils.Message(use_aliases, type(use_aliases))
     for f in feature_set.get('fields', []):
         if use_aliases in (True, 'true'):
             headers.append(f['alias'])
