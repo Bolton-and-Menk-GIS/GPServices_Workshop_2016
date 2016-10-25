@@ -6,7 +6,7 @@ var Module = (function() {
   require(["esri/config"], function(esriConfig){
     esriConfig.defaults.io.corsDetection = true;
     esriConfig.defaults.io.corsEnabledServers.push("http://gis.bolton-menk.com/");
-  })
+  });
   return module;
 }());
 // ::::::::::::::::::::::::::::::::: \\
@@ -29,8 +29,8 @@ Module.Map = (function(){
         });
 
         // :: INSTANTIATE PARCEL LAYER :: \\
-        parcels = new FeatureLayer("http://gis.stlouiscountymn.gov/arcgis/rest/services/GeneralUse/OpenData/MapServer/7", {
-          // parcels = new FeatureLayer("http://gis.bolton-menk.com/arcdev/rest/services/MN_GIS/Duluth_Parcels/MapServer/1", {
+        // parcels = new FeatureLayer("http://gis.stlouiscountymn.gov/arcgis/rest/services/GeneralUse/OpenData/MapServer/7", {
+          parcels = new FeatureLayer("http://gis.bolton-menk.com/arcdev/rest/services/MN_GIS/Duluth_Parcels/MapServer/1", {
             mode: FeatureLayer.ON_DEMAND,
             infoTemplate: Module.Style.getInfoTemplate(),
             outFields: ['*']
@@ -61,7 +61,6 @@ Module.Map = (function(){
       connect.connect(Module.Style.getPopup(map),"onRestore",function(){
         $('.space-table td').removeClass('expand');
       });
-
       });
   return{
     // EXPOSE MAP AND PARCELS OBJECTS \\
@@ -106,6 +105,7 @@ Module.Draw = (function() {
       Module.Map.getMapInfo().map.infoWindow.set('highlight',false);
       // INITIALIZE DRAW TOOL \\
       var draw = this.init(Module.Map.getMapInfo().map);
+      // CALL FREEDRAW METHOD \\
       draw.freeDraw.activate(draw.Draw.FREEHAND_POLYGON);
       // DRAW EVENT HANDLER \\
       draw.freeDraw.on("draw-complete", function(rsp) {
@@ -114,7 +114,6 @@ Module.Draw = (function() {
         // SET SELECT QUERY GEOMETRY \\
         draw.selectQuery.geometry = rsp.geometry;
         // SET PARCELS FIELDS OFF OF FEATURE LAYER FIELDS DEFINITION \\
-        console.log("LAYER? ", layer)
         var fields = layer.fields;
         // CREATE JSON OBJECT TO STORE SELECTION FEATURES \\ 
         var JSONinput = {fields: fields,
@@ -127,11 +126,11 @@ Module.Draw = (function() {
           var symbol = Module.Style.getSymbol().selection;
           // ITERATE THROUGH SELECTION RESPONSE \\
           res.forEach(function(v, i) {
-            // CREATE GRAPHICS LAYER \\
+            // CREATE GRAPHICS LAYER FOR THE SELECTION SYMBOL \\
             var selectGraphic = new ArcGISMod.Graphic();
-            // 
             selectGraphic.setSymbol(symbol);
             selectGraphic.geometry = v.geometry;
+            // ADD SELECTED GRAPHIC TO THE MAP'S GRAPHICS LAYER \\
             Module.Map.getMapInfo().map.graphics.add(selectGraphic);
             // IF GEOMETRY IS NEEDED EXTRACT GEOMETRY \\
             if(geom){
@@ -139,11 +138,12 @@ Module.Draw = (function() {
             }else{
             JSONinput.features.push({attributes: v.attributes}); 
             }
-
           });
+          // PUSH SELECTED FEATURES TO INFOWINDOW'S SELECTION \\
           Module.Map.getMapInfo().map.infoWindow.setFeatures(res);
           // PRELOAD GP FUNCTION WITH SELECTED FEATURES FROM SELECTION \\
           Module.GP.getData(JSONinput);
+          // INVOKE CALLBACK \\
           callback(JSONinput, type);
         });
       });

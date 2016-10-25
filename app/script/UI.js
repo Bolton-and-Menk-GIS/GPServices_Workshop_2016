@@ -1,3 +1,93 @@
+
+// :::::::::::: TOOL ACTIVATION UI :::::::::::: \\
+$(function() {
+  // MENU BAR DROPDOWN \\
+  $('#info').hover(function() {
+    $('.menuItem').slideToggle(function() {});
+  });
+  // :: GIVE DRAW AND MAPCLICK SCOPE OUTSIDE OF ONCLICK EVENTS :: \\
+  var draw;
+  var mapClick;
+  // MENU ITEM CLICK HANDLERS \\
+  $('.menuItem').click(function() {
+    UI.Dialog().hide('fast');
+    // :: CHECK IF SELECTED ELEMENT IS ACTIVE IF NOT ACTIVATE :: \\
+    if (!($(this).hasClass('active'))) {
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+      // MAILING LABELS \\
+      if ($(this).attr('id') == 'mailingItem') {
+        if (mapClick) {
+          // IF MAP CLICK IS REGISTERED UNHOOK IT \\
+          mapClick.remove();
+        }
+        if (draw) {
+          // IF DRAW ACTIVE DEACTIVATE DRAW \\
+          Module.Draw.deselect(draw);
+        }
+        var label = "<b><u>Mailing Labels</u></b>";
+        // SHOW TOOLTIP ON ELEMENT ITEM CLICK \\
+        UI.showToolTip().show(label);
+
+        // CALL SELECT METHOD ON DRAW \\
+        draw = Module.Draw.select(false, Module.Map.getMapInfo().parcels, 'mailingLabels', showDialog);
+        // WHEN DONE EXECUTING CALL SHOW DIALOG \\
+      }
+      // FEATURE EXPORT \\
+      else if ($(this).attr('id') == 'exportFtrsItem') {
+        if (mapClick) {
+          mapClick.remove();
+        }
+        if (draw) {
+          Module.Draw.deselect(draw);
+        }
+        var label = "<b><u>Export Features</u></b>";
+        UI.showToolTip().show(label);
+        // CALL SELECT METHOD ON DRAW \\
+        draw = Module.Draw.select(true, Module.Map.getMapInfo().parcels, 'ftrExport', showDialog);
+        // WHEN DONE EXECUTING CALL SHOW DIALOG \\
+
+        // MAP EXPORT \\
+      } else {
+        if (mapClick) {
+          mapClick.remove();
+        }
+        if (draw) {
+          Module.Draw.deselect(draw);
+        }
+        // CLEAR FEATURES HIDE INFO WINDOW \\
+        Module.Map.getMapInfo().map.infoWindow.hide();
+        Module.Map.getMapInfo().map.infoWindow.clearFeatures();
+
+        var label = "<b><u>Export Property Map</u></b>";
+        var mode = 'PropertyMap';
+        UI.showToolTip().show(label, mode);
+        mapClick = Module.Map.getMapInfo().map.on("click", function(ftr) {
+          var selectedFeature = Module.Map.getMapInfo().map.infoWindow.getSelectedFeature();
+          Module.GP.getData(selectedFeature);
+          UI.Dialog().toolUI.show(ftr, mode);
+        });
+      }
+      // CLEANUP INACTIVE ELEMENT PROPERTIES \\
+    } else {
+      $(this).removeClass('active');
+      if (mapClick) {
+        mapClick.remove();
+      }
+      if (draw) {
+        Module.Draw.deselect(draw);
+      }
+      Module.Map.getMapInfo().map.infoWindow.hide()
+      Module.Map.getMapInfo().map.infoWindow.clearFeatures();
+      UI.Dialog().hide();
+    }
+    // TOOLUI CALLBACK WHEN GP PROCESS HAS FINISHED  \\
+    function showDialog(featureSet, type) {
+      UI.Dialog().toolUI.show(featureSet.features, type);
+    }
+  });
+});
+
 // ::::: UI MODULE ::::: \\
 var UI = (function() {
   return {
@@ -76,7 +166,7 @@ var UI = (function() {
               })
             }
 
-            // :: RUN TOOL :: \\
+            // :: RUN INPUT TO PREPARE SELECTION SET FOR GP TASK :: \\
             UI.Dialog().toolUI.runInput();
           },
 
@@ -100,7 +190,7 @@ var UI = (function() {
                 if ($('#dataExpTitle').html()) {
                   name = $('#dataExpTitle').html();
                 }
-              } 
+              }
               // STAGE RUN GP TOOL FOR EXPORT PROPERTY MAP \\
               else {
                 var GPProcess = 'propertyMap';
@@ -113,9 +203,8 @@ var UI = (function() {
         // CALLS GPTOOLS MODULE METHOD TO EXECUTE GP TASK \\
         run: function(prcs, async) {
           // EVALUATES PROCSS ARG AND INVOKES CORRESPONDING GPTool FUNCTION TO RUN GP PROCESS \\
-          // prcs = GPTool MODULE FUNCTION \\
-          // async = ASYNCHRONOUS/SYNCHRONOUS BOOLEAN  
           Module.GP.run[prcs](function(rslt) {
+            // CHECK IF TASK IS SYNCHRONOUS OR ASYNCHRONOUS \\
             if (async) {
               UI.Dialog().download.complete(rslt, 'asynchronous');
             } else {
@@ -216,7 +305,7 @@ var UI = (function() {
           } else {
             orientOpt = 'Landscape'
           }
-          
+
           // :: RETURN FORM ELEMENT STATES :: \\
           return {
             mailOpt,
@@ -250,84 +339,3 @@ var UI = (function() {
     }
   }
 })();
-// :::::::::::: TOOL ACTIVATION UI :::::::::::: \\
-$(function() {
-  // MENU BAR DROPDOWN \\
-  $('#info').hover(function() {
-    $('.menuItem').slideToggle(function() {});
-  });
-  // :: GIVE DRAW AND MAPCLICK SCOPE OUTSIDE OF ONCLICK EVENTS :: \\
-  var draw;
-  var mapClick;
-  // MENU ITEM CLICK HANDLERS \\
-  $('.menuItem').click(function() {
-    UI.Dialog().hide('fast');
-    // :: CHECK IF SELECTED ELEMENT IS ACTIVE IF NOT ACTIVATE :: \\
-    if (!($(this).hasClass('active'))) {
-      $(this).addClass('active');
-      $(this).siblings().removeClass('active');
-      // IF MAILING ITEM IS SELECTED \\
-      if ($(this).attr('id') == 'mailingItem') {
-        if (mapClick) {
-          // IF MAP CLICK IS REGISTERED UNHOOK IT \\
-          mapClick.remove();
-        }
-        if (draw) {
-          // IF DRAW ACTIVE DEACTIVATE DRAW \\
-          Module.Draw.deselect(draw);
-        }
-        draw = Module.Draw.select(false, Module.Map.getMapInfo().parcels, 'mailingLabels', showDialog);
-        var label = "<b><u>Mailing Labels</u></b>";
-        // SHOW TOOLTIP ON CLICK \\
-        UI.showToolTip().show(label);
-      }
-      // IF FEATURE EXPORT IS SELECTED \\
-      else if ($(this).attr('id') == 'exportFtrsItem') {
-        $(this).addClass('active');
-        var label = "<b><u>Export Features</u></b>";
-        if (mapClick) {
-          mapClick.remove();
-        }
-        if (draw) {
-          Module.Draw.deselect(draw);
-        }
-        UI.showToolTip().show(label);
-        draw = Module.Draw.select(true, Module.Map.getMapInfo().parcels, 'ftrExport', showDialog);
-        // ELSE MAP EXPORT \\
-      } else {
-        if (mapClick) {
-          mapClick.remove();
-        }
-        if (draw) {
-          Module.Draw.deselect(draw);
-        }
-        Module.Map.getMapInfo().map.infoWindow.hide();
-        Module.Map.getMapInfo().map.infoWindow.clearFeatures();
-        var label = "<b><u>Export Property Map</u></b>";
-        var mode = 'PropertyMap';
-        UI.showToolTip().show(label, mode);
-        mapClick = Module.Map.getMapInfo().map.on("click", function(ftr) {
-          var selectedFeature = Module.Map.getMapInfo().map.infoWindow.getSelectedFeature();
-          Module.GP.getData(selectedFeature)
-          UI.Dialog().toolUI.show(ftr, mode);
-        });
-      }
-      // CLEANUP INACTIVE ELEMENT PROPERTIES \\
-    } else {
-      $(this).removeClass('active');
-      if (mapClick) {
-        mapClick.remove();
-      }
-      if (draw) {
-        Module.Draw.deselect(draw);
-      }
-      Module.Map.getMapInfo().map.infoWindow.hide()
-      Module.Map.getMapInfo().map.infoWindow.clearFeatures();
-      UI.Dialog().hide();
-    }
-    // TOOLUI CALLBACK WHEN GP PROCESS HAS FINISHED  \\
-    function showDialog(data, type) {
-      UI.Dialog().toolUI.show(data.features, type);
-    }
-  });
-});

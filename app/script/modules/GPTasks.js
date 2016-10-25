@@ -39,7 +39,8 @@ Module.GP = (function() {
             "UseAliases": UI.Dialog().getFormProps().aliaschk
           }
         }
-        // :::: MAILING LABELS GP REST ENDPOINT :::: \\
+
+         // :::: MAILING LABELS GP REST ENDPOINT :::: \\
         var gp = new GP('http://gis.bolton-menk.com/bmigis/rest/services/MN_GIS/ExportMailingLabels/GPServer/Export%20Mailing%20Labels');
         // EXECUTE GP PROCESS INVOKE CALLBACK WITH RESULTS \\
         // EXECUTE METHOD = SYNCHRONOUS GP TASK \\
@@ -107,6 +108,7 @@ Module.GP = (function() {
             "Resolution": UI.Dialog().getFormProps().sliderVal,
             "Orientation": UI.Dialog().getFormProps().orientOpt
           }
+
           // :: INSTANTIATE MAP EXPORT GP OBJECT FROM GP CLASS PASSING IN REST ENDPOINT :: \\
         var gp = new GP('http://gis.bolton-menk.com/bmigis/rest/services/MN_GIS/ExportPropertyCard/GPServer/Export%20Property%20Card');
         // CALL SUBMIT JOB METHOD PASS IN PARAMS \\
