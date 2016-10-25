@@ -29,8 +29,8 @@ Module.Map = (function(){
         });
 
         // :: INSTANTIATE PARCEL LAYER :: \\
-        // parcels = new FeatureLayer("http://gis.stlouiscountymn.gov/arcgis/rest/services/GeneralUse/OpenData/MapServer/7", {
-          parcels = new FeatureLayer("http://gis.bolton-menk.com/arcdev/rest/services/MN_GIS/Duluth_Parcels/MapServer/1", {
+        parcels = new FeatureLayer("http://gis.stlouiscountymn.gov/arcgis/rest/services/GeneralUse/OpenData/MapServer/7", {
+          // parcels = new FeatureLayer("http://gis.bolton-menk.com/arcdev/rest/services/MN_GIS/Duluth_Parcels/MapServer/1", {
             mode: FeatureLayer.ON_DEMAND,
             infoTemplate: Module.Style.getInfoTemplate(),
             outFields: ['*']
@@ -65,7 +65,7 @@ Module.Map = (function(){
   return{
     // EXPOSE MAP AND PARCELS OBJECTS \\
     getMapInfo: function(){
-      return {map, parcels}
+      return {map: map, parcels: parcels}
     }
   }
 })();

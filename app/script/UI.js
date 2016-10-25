@@ -306,14 +306,14 @@ var UI = (function() {
             orientOpt = 'Landscape'
           }
 
-          // :: RETURN FORM ELEMENT STATES :: \\
+          // :: RETURN DIALOG INPUT STATES :: \\
           return {
-            mailOpt,
-            orientOpt,
-            sliderVal,
-            aliaschk,
-            dataExpTitle,
-            GDBchk
+            mailOpt: mailOpt,
+            orientOpt: orientOpt,
+            sliderVal: sliderVal,
+            aliaschk: aliaschk,
+            dataExpTitle: dataExpTitle,
+            GDBchk: GDBchk
           }
         }
       }
