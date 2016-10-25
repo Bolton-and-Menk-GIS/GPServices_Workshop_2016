@@ -1,7 +1,7 @@
 {
 	"temp_dir": "\\\\arcserver2\\wwwroot\\MN_GIS\\TempFiles",
 	"web_path": "http://gis.bolton-menk.com/MN_GIS/TempFiles",
-	"map_template": "\\\\arcdev\\dev\\gis_lis\\GPServices_Workshop_2016\\GP\\python\\templates\\template3.mxd",
+	"map_template": "\\\\arcdev\\dev\\gis_lis\\GPServices_Workshop_2016\\GP\\python\\templates\\template.mxd",
 	"selection_lyr": "\\\\arcdev\\dev\\gis_lis\\GPServices_Workshop_2016\\GP\\python\\templates\\data\\SelectedParcel.lyr",
 	"clean_dirs": true
 }

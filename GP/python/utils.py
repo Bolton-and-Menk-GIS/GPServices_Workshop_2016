@@ -286,7 +286,7 @@ def read_config():
         config_file = os.path.join(os.path.dirname(__file__), 'config.json')
     except:
         config_file = os.path.join(os.path.abspath(sys.argv[0]), 'config.json')
-
+    Message("Config File: {}".format(config_file))
     if os.path.exists(config_file):
         with open(config_file, 'r') as f:
             return json.load(f)
