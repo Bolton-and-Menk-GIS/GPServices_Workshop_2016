@@ -82,8 +82,9 @@ $(function() {
       UI.Dialog().hide();
     }
     // TOOLUI CALLBACK WHEN GP PROCESS HAS FINISHED  \\
-    function showDialog(featureSet, type) {
-      UI.Dialog().toolUI.show(featureSet.features, type);
+    function showDialog(JsonInput, type) {
+      // from Draw.Select() callback > returns JsonInput \\
+      UI.Dialog().toolUI.show(JsonInput.features, type);
     }
   });
 });

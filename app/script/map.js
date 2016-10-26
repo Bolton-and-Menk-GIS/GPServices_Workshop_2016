@@ -120,12 +120,12 @@ Module.Draw = (function() {
           features: []
         }
         // EXECUTE SELECT FEATURES ON PARCELS \\
-        layer.selectFeatures(draw.selectQuery).then(function(res) {
+        layer.selectFeatures(draw.selectQuery).then(function(rsp) {
           Module.Map.getMapInfo().map.graphics.clear();
           // SET SYMBOL FOR FEATURES SELECTED \\
           var symbol = Module.Style.getSymbol().selection;
           // ITERATE THROUGH SELECTION RESPONSE \\
-          res.forEach(function(v, i) {
+          rsp.forEach(function(v, i) {
             // CREATE GRAPHICS LAYER FOR THE SELECTION SYMBOL \\
             var selectGraphic = new ArcGISMod.Graphic();
             selectGraphic.setSymbol(symbol);
@@ -139,8 +139,8 @@ Module.Draw = (function() {
             JSONinput.features.push({attributes: v.attributes}); 
             }
           });
-          // PUSH SELECTED FEATURES TO INFOWINDOW'S SELECTION \\
-          Module.Map.getMapInfo().map.infoWindow.setFeatures(res);
+          // PUSH SELECTED FEATURES TO INFOWINDOW'S SELECTION IN POPUP \\
+          Module.Map.getMapInfo().map.infoWindow.setFeatures(rsp);
           // PRELOAD GP FUNCTION WITH SELECTED FEATURES FROM SELECTION \\
           Module.GP.getData(JSONinput);
           // INVOKE CALLBACK \\
