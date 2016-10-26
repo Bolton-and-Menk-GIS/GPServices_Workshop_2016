@@ -16,6 +16,7 @@ $(function() {
       $(this).addClass('active');
       $(this).siblings().removeClass('active');
       // MAILING LABELS \\
+      // IF STATEMENT TO EVALUATE WHICH ELEMENT IS SELECTED \\
       if ($(this).attr('id') == 'mailingItem') {
         if (mapClick) {
           // IF MAP CLICK IS REGISTERED UNHOOK IT \\
@@ -47,7 +48,7 @@ $(function() {
         draw = Module.Draw.select(true, Module.Map.getMapInfo().parcels, 'ftrExport', showDialog);
         // WHEN DONE EXECUTING CALL SHOW DIALOG \\
 
-        // MAP EXPORT \\
+        // PROPERTY MAP EXPORT \\
       } else {
         if (mapClick) {
           mapClick.remove();
@@ -60,12 +61,12 @@ $(function() {
         Module.Map.getMapInfo().map.infoWindow.clearFeatures();
 
         var label = "<b><u>Export Property Map</u></b>";
-        var mode = 'PropertyMap';
-        UI.showToolTip().show(label, mode);
+        var type = 'PropertyMap';
+        UI.showToolTip().show(label, type);
         mapClick = Module.Map.getMapInfo().map.on("click", function(ftr) {
           var selectedFeature = Module.Map.getMapInfo().map.infoWindow.getSelectedFeature();
           Module.GP.getData(selectedFeature);
-          UI.Dialog().toolUI.show(ftr, mode);
+          UI.Dialog().toolUI.show(ftr, type);
         });
       }
       // CLEANUP INACTIVE ELEMENT PROPERTIES \\
@@ -114,7 +115,7 @@ var UI = (function() {
               $('#content').append('<h2># of Parcels Selected: ' + ftrs.length + '</h2>');
               $('#content').append('<div class="ddDsc"><h3>Mailing Label Type</h3></div>');
               $('.ddDsc').append('<select id="mailPckr" class="picker"><option select>Owner</option><option>Taxpayer</option><option>Current</option></select>').append('<i id="runMail" class="fa fa-check" aria-hidden="true" title="Run Mailing Labels"></i>').append('<div id="dl" style="margin-top: 14px; padding-left: 45%;"></div>').append('<div id="aliaschkdiv">Alias Fields<i id="aliaschk" class="fa fa-check-square-o" aria-hidden="true"></i></div>');
-              // :::: EVALUATE CHECKBOX STATE :::: \\
+              // :::: EVALUATE CHECKBOX STATE FOR CHECK BOX TOGGLE :::: \\
               $('#aliaschk').click(function() {
                 if (UI.Dialog().getFormProps().aliaschk) {
                   $(this).removeClass('fa-check-square-o');
@@ -233,8 +234,10 @@ var UI = (function() {
               $('#dlc').fadeIn(500);
               $('#dlc').click(function() {
                 if (async) {
+                  // SUBMITJOB() CALLBACK RESPONSE \\
                   window.open(jobRslt.value);
                 } else {
+                  // EXECUTE() CALLBACK RESPONSE \\
                   window.open(jobRslt[0].value);
                 }
               })

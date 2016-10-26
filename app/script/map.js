@@ -105,7 +105,7 @@ Module.Draw = (function() {
       Module.Map.getMapInfo().map.infoWindow.set('highlight',false);
       // INITIALIZE DRAW TOOL \\
       var draw = this.init(Module.Map.getMapInfo().map);
-      // CALL FREEDRAW METHOD \\
+      // ACTIVATE FREEDRAW TOOL \\
       draw.freeDraw.activate(draw.Draw.FREEHAND_POLYGON);
       // DRAW EVENT HANDLER \\
       draw.freeDraw.on("draw-complete", function(rsp) {
